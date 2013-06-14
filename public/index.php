@@ -11,9 +11,10 @@
 			<p>Batman is the superhero protector of Gotham City, a man dressed like a bat who fights against evil...<a href="#">Read More +</a><br />
 			<span class="price">$39.99</span>
 			</p>
-			<form action="">
-				<input type="text" name="quantity" placeholder="Qty">
-				<input type="submit" name="submit" value="Add to Cart">
+			<form method="POST" action="">
+				<input type="text" name="quantity" placeholder="Qty" id="quantity" />
+				<input type="submit" name="submit" value="Add to Cart" id="submit" />
+				<span class="message" id="qtyMessage"></span>
 			</form>			
 		</div>
 
@@ -23,8 +24,9 @@
 			<p>Too scrawny and frail to enlist in the U.S. Military during World War II, Steve Rogers volunteered...<a href="#">Read More +</a><br />
 			<span class="price">$39.99</span></p>
 			<form action="">
-				<input type="text" name="quantity" placeholder="Qty">
-				<input type="submit" name="submit" value="Add to Cart">
+				<input type="text" name="quantity" placeholder="Qty" id="quantity">
+				<input type="submit" name="submit" value="Add to Cart" >
+				<span class="message" id="qtyMessage"></span>
 			</form>			
 		</div>
 
