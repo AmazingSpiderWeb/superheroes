@@ -293,3 +293,95 @@ p.intro a{
 	margin: 20px 0 0 0;
 }
 /* ADMAIN CSS END*/
+
+/* ABOUT US*/
+
+.box{
+	width: 960px;
+	height: 450px;
+	font-family: 'Carter One';
+	color: white;
+	font-size: 25px;
+	position: relative;
+	top: -45px;
+	
+	
+}
+
+.desc{
+	font-size: 20px;
+}
+
+.contentbox{
+	color: white;
+	height: 250px;
+	width: 350px;
+	position: relative;
+	left: 520px;
+	top: -130px;
+	font-family: 'Merienda';
+	font-size: 20px;
+	margin: 20px 20px 20px 20px;
+}
+
+.logos{
+	position: relative;
+	top: -240px;
+	
+	
+}
+
+.rectitle{
+	position: absolute;
+	top: 300px;
+	font-family:'Merienda';
+}
+
+.remainder{
+	
+	width: 900px;
+	height: 77px;
+	position: relative;
+	top: -170px;
+	left: 30px;
+	font-family: 'Arapey', serif;
+	font-size: 22px;
+}
+
+/* ABOUT US PAGE END*/
+
+
+/* CONTACT US PAGE */
+.submitfield{
+	color: white;
+}
+
+input[type=text]{
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	width: 240px;
+}
+.form{
+	height: 500px;
+}
+.form h1{
+	font-family: 'Carter One';
+	color: white;
+	font-size: 45px;
+}
+
+.content{
+	color: white;
+	width: 300px;
+	position: absolute;
+	left: 400px;
+	top: 120px;
+	font-size: 22px;
+}
+
+.submitbutton{
+	position: absolute;
+	left: 10px;
+}
+
+/* CONTACT US PAGE END */
