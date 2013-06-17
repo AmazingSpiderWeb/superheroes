@@ -2,9 +2,10 @@
 	box-sizing: border-box;
 }
 body{
-	font-family: Arial;
+	font-family: "Lato", sans-serif;
 	margin: 0;
 	background: url(../images/background3.jpg) no-repeat top center fixed;
+	background-color: #000000;
 	padding: 50px 0 0 0;
 }
 
@@ -93,7 +94,7 @@ p.intro{
 .features:nth-of-type(3), .features:nth-of-type(6), .features:nth-of-type(9), .features:nth-of-type(12){
 	margin: 0 0 20px 0;
 }
-.features h3 a{
+.features h3{
 	font-size: 1.5em;
 	padding: 0 20px;
 	font-family: 'Carter One';	
@@ -132,7 +133,7 @@ input[type="submit"]{
 }
 
 
-/* DETAIl PAGE*/
+/* DETAIL PAGE*/
 .detail{
 	padding: 0 0 50px 0;
 	background: #fff;
@@ -296,92 +297,136 @@ p.intro a{
 
 /* ABOUT US*/
 
-.box{
-	width: 960px;
-	height: 450px;
-	font-family: 'Carter One';
+.recommend{
+	padding: 20px;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 20px;
+	background: #70aaba;
+	float: left;
+	display: inline-block;
+	width: 380px;
+	margin: 20px;
+}
+
+.recommend span{
+	font-weight: 700;
+	font-style: italic;
 	color: white;
-	font-size: 25px;
-	position: relative;
-	top: -45px;
-	
-	
 }
 
-.desc{
-	font-size: 20px;
-}
-
-.contentbox{
+.recommend p{
 	color: white;
-	height: 250px;
-	width: 350px;
-	position: relative;
-	left: 520px;
-	top: -130px;
-	font-family: 'Merienda';
-	font-size: 20px;
-	margin: 20px 20px 20px 20px;
 }
 
-.logos{
-	position: relative;
-	top: -240px;
-	
-	
-}
 
-.rectitle{
-	position: absolute;
-	top: 300px;
-	font-family:'Merienda';
-}
-
-.remainder{
-	
-	width: 900px;
-	height: 77px;
-	position: relative;
-	top: -170px;
-	left: 30px;
-	font-family: 'Arapey', serif;
-	font-size: 22px;
-}
 
 /* ABOUT US PAGE END*/
 
 
 /* CONTACT US PAGE */
-.submitfield{
-	color: white;
+
+.form input[type=text]{
+	font-size: 1em;
+	width: 460px;
+	border: none;
+	background: #d7d7d7;
+	margin-bottom: 10px;
+	height: 40px;
+	padding: 10px;
+}
+.form{
+	width: 500px;
+	padding: 0 20px 20px 20px;
+	position: relative;
+	display: inline-block;
+	height: 340px;
+	float: left;
 }
 
+.form form{
+	margin: 0;
+}
+
+.subheading{
+	padding: 20px;
+}
+
+.content{
+	width: 460px;
+	display: inline-block;
+	padding: 0 20px;
+	line-height: 1.5em;
+	float: left;
+}
+
+.content pre{
+	margin: 0;
+	font-family: "Lato";
+	font-size: 1em;
+	font-weight: 400;
+	color: #666;
+}
+
+.content p{
+	margin: 0;
+}
+
+
+.form textarea{
+	font-size: 1em;
+	width: 460px;
+	border: none;
+	background: #d7d7d7;
+	margin-bottom: 10px;
+	padding: 10px;
+	height: 120px;
+}
+	
 .form input[type=text]{
 	font-size: 1.2em;
 	margin-bottom: 1em;
 	width: 240px;
-}
-.form{
-	height: 500px;
-}
-.form h1{
-	font-family: 'Carter One';
-	color: white;
-	font-size: 45px;
+
 }
 
-.content{
-	color: white;
-	width: 300px;
-	position: absolute;
-	left: 400px;
-	top: 120px;
-	font-size: 22px;
+input[type=text].fname,
+input[type=text].lname,
+input[type=text].phone,
+input[type=text].country{
+	width: 226px;
+	display: inline-block;
 }
 
-.submitbutton{
-	position: absolute;
-	left: 10px;
+input[type=text].lname,
+input[type=text].country{
+	margin-left: 5px;
 }
+
+#submitbutton{
+	padding: 10px;
+	display: inline-block;
+	margin-right: 20px;
+	width: 200px;
+	height: 40px;
+}
+
+.map{
+	width: 920px;
+}
+
+.map img{
+	margin: 0;
+	padding: 20px;
+}
+
+.superheroGroup img{
+	margin: 0;
+	padding: 0;
+}
+
 
 /* CONTACT US PAGE END */
+
+
+

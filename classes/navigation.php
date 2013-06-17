@@ -1,6 +1,8 @@
 <?php
 
 require_once('database.php');
+require_once('page.php');
+$product = new Product($_GET['id']);
 
 class Navigation{
 
@@ -20,26 +22,25 @@ class Navigation{
 	function make_admin_lists(){
 		$all_of_the_products = $this->get_products();
 
-		echo '<h2>Products</h2>';
-
-		echo '<ul>';
 		foreach($all_of_the_products as $product){
 			# Make the title of the category a link, so that we can edit it.
-			echo '<li>';
-			echo '<a href="view_product.php?id='.$product['product_id'].'">';
-			echo $product['product_name'];
-			echo '</a></li>';
+			echo '<div class="features">';
+			echo '<img src="'.$product['image'].'" />';
+			echo '<h3>'.$product['product_name'].'</h3>';
+			echo '<p>'.substr($product['description'],0,150).'...';
+			echo '<span class="price">$'.$product['price'].'</span></p>';
+			echo '<a href="product_edit_page.php?id='.$product['product_id'].'" class="edit">Edit Page</a>';
+			echo '<a href="" name="delete">Delete</a>';
+			echo '</a></div>';
 
 		}
-		echo '</ul>';
-		echo '<a href="new_page.php" class="button">+ New Product</a>';
 	}
 
 
 
 	# We need a function to get all the categories
 	function get_products(){
-		$products = $this->db->get('product_id, product_name', 'tb_products');
+		$products = $this->db->get('product_id, product_name, image, description, price', 'tb_products');
 		return $products;
 	}
 

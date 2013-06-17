@@ -1,25 +1,42 @@
-<?php include '../includes/admin_header.php'; ?>
+<?php 
 
-	<div class="main detail">
-		<img src="../public/assets/images/Batman.jpg" alt="" />
-		<div class="description">
-			<form action="" class="editForm">	
-			<label for="title">Product Title</label>
-			<input type="text" name="title" value="Batman"/><br />
-			<label for="description">Description</label>
-			<textarea name="description">
-				Bruce Wayne witnessed the murder of his billionaire parents as a child, swearing to avenge them. He trained extensively to achieve both mental and physical perfection, mastering detective skills, martial arts, and criminal psychology.
-				<br /><br />
-				 Costumed as a bat to prey on criminals' fear and utilizing a high-tech arsenal in his crusade to rid Gotham City of crime, the legendary Batman was born.
-			</textarea><br />
-			<label for="price">Price</label>
-			<input type="text" name="price" value="$39.99"/><br />
-			<label for="image">Image</label>
-			<input type="file" name="image" /><br />
+require_once('../classes/page.php');
+require_once('../classes/form.php');
 
-			<input type="submit" name="submit" value="Save">
-			<a href="" name="delete">Delete</a>
-			</form>		
-		</div>
+$form = new Form();
+$product = new Product($_GET['id']);
 
-	</div>
+include '../includes/admin_header.php'; 
+
+	echo '<div class="main detail">';
+
+	echo '<img src="'.$product->image.'" />';
+
+	echo '<div class="description">';
+	echo $form->open('update_page.php', 'post', 'editForm');
+
+	echo $form->label('title', 'Product Name');	
+
+	echo $form->text('title', $product->product_name);
+	echo $form->hidden('title', $product->product_id);
+
+
+	echo $form->label('description', 'Description');
+
+	echo $form->textarea('description', $product->description);
+
+	echo $form->label('price', 'Price');
+
+	echo $form->text('price', '$'.$product->price);
+
+	echo $form->label('image', 'Image URL');
+	echo $form->text('image', $product->image);
+
+	echo '<br>';
+	
+
+		echo $form->submit('submit', 'SAVE');
+		echo '<a href="delete_page.php?id='.$page->id.'" class="delete">Delete</a>';
+	echo $form->close();
+
+	
