@@ -1,42 +1,33 @@
 <?php include '../includes/header.php'; ?>
 
-	<div class="main">
-			
+	<div class="main detail">
+		<h2 class="subheading">Contact Us</h2>
 		<div class="form">
-			<h1>Contact Us</h1>
-			
 			<form>
-				<div class="submitfield"><label id="fname">First Name:</label><br />
-				<input name="fname" type="text" placeholder="e.g. John" /></div>
-
-				<div class="submitfield"><label id="lname">Last Name:</label><br />
-				<input name="fname" type="text" placeholder="e.g. Doe" /></div>
-
-				<div class="submitfield"><label id="phone">Phone:</label><br />
-				<input name="email" type="text" placeholder="e.g. (04)3959220" /></div>
-
-				<div class="submitfield"><label id="email">Email:</label><br />
-				<input name="email" type="text" placeholder="e.g. user@example.com" /></div>
-
-				<div class="submitfield"><label id="country">Country:</label><br />
-				<input name="email" type="text" placeholder="e.g. New Zealand" /></div>
-				
-				<div class="submitbutton">
-				<input name="submit" id="submits" value="Submit" type="submit" />
-				</div>
+				<input name="fname" class="fname" type="text" placeholder="first name" />
+				<input name="lname" class="lname" type="text" placeholder="last name" />
+				<input name="phone" class="phone" type="text" placeholder="phone" />
+				<input name="country" class="country" type="text" placeholder="country" />
+				<input name="email" class="email" type="text" placeholder="email" />
+				<textarea name="comment" id="comment" placeholder="comment..." cols="30" rows="10"></textarea>
+				<input name="submit" id="submitbutton" value="Submit" type="submit" />
 			</form>
-
-			
 		</div>
-
 		<div class="content">
-			<p>You can contact us using the form to the left or alternatively by taking advantage of the contact information beneath.</p>
+			<p>You can contact us using the form to the left or alternatively by taking advantage of the contact information beneath.</p><br>
 			
-			<p>Phone:</p>
-			<p>Email:</p>
-			<p>Address:</p>
-		</div>
+<pre>
+Phone:	+64 9 634 4399
+Email:		info@amazingsuperheroes.co.nz
+Address:	264 The Mall,
+			Onehunga, Auckland, 
+			New Zealand</pre>
 
+		</div>
+		<div class="map">
+			<img src="assets/images/super_map.jpg" alt="">
+		</div>
 	</div>
 
-<?php include '../includes/footer.php'; ?>
+			
+	<?php include '../includes/footer.php'; ?>
