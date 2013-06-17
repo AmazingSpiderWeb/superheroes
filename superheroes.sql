@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 13, 2013 at 03:49 p.m.
+-- Generation Time: Jun 17, 2013 at 05:23 p.m.
 -- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
@@ -76,7 +76,8 @@ CREATE TABLE IF NOT EXISTS `tb_products` (
   `product_name` varchar(30) NOT NULL,
   `image` varchar(225) NOT NULL,
   `description` text NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` decimal(11,0) NOT NULL,
+  `hidden` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
@@ -84,13 +85,13 @@ CREATE TABLE IF NOT EXISTS `tb_products` (
 -- Dumping data for table `tb_products`
 --
 
-INSERT INTO `tb_products` (`product_id`, `product_name`, `image`, `description`, `price`) VALUES
-(1, 'Batman', '', '<p>Batman is the superhero protector of Gotham City, a man dressed like a bat who fights against evil and strikes terror into the hearts of criminals everywhere. </p>', 40),
-(2, 'Captain America', '', '<p>Too scrawny and frail to enlist in the U.S. Military during World War II, Steve Rogers volunteered to receive the experimental Super-Soldier Serum. Enhanced to the pinnacle of human physical potential he became Captain America.</p>', 40),
-(3, 'Hulk', '', '<p>The Incredible Hulk: a green behemoth who is the living personification of rage and pure physical strength.</p>', 40),
-(4, 'Ironman', '', '<p>After he was kidnapped by terrorists and gravely injured, billionaire iTony Stark was pressured to create a weapon of mass destruction. Now vowing to protect a world he helped endanger, he became the Invincible Iron Man.</p>', 40),
-(5, 'Spiderman', '', '<p>He is one super-hero who has not lost the common touch, and in fact he is frequently described as "your friendly neighborhood Spider-Man."</p>', 40),
-(6, 'Superman', '', '<p>Using his immense solar-fueled powers, he became Superman to defend mankind from oppression while championing truth, justice, and the American way!</p>', 40);
+INSERT INTO `tb_products` (`product_id`, `product_name`, `image`, `description`, `price`, `hidden`) VALUES
+(1, 'Batman1', '../public/assets/images/Batman.jpg', 'Batman is the superhero protector of Gotham City, a man dressed like a bat who fights against evil and strikes terror into the hearts of criminals everywhere. ', '30', 0),
+(2, 'Captain America1', '../public/assets/images/CaptainAmerica.jpg', 'Too scrawny and frail to enlist in the U.S. Military during World War II, Steve Rogers volunteered to receive the experimental Super-Soldier Serum. Enhanced to the pinnacle of human physical potential he became Captain America.', '30', 0),
+(3, 'Hulk', '../public/assets/images/Hulk.jpg', 'The Incredible Hulk: a green behemoth who is the living personification of rage and pure physical strength.', '40', 0),
+(4, 'Ironman', '../public/assets/images/Ironman.jpg', 'After he was kidnapped by terrorists and gravely injured, billionaire iTony Stark was pressured to create a weapon of mass destruction. Now vowing to protect a world he helped endanger, he became the Invincible Iron Man.', '40', 0),
+(5, 'Spiderman', '../public/assets/images/Spiderman.jpg', 'He is one super-hero who has not lost the common touch, and in fact he is frequently described as "your friendly neighbourhood Spider-Man."', '40', 0),
+(6, 'Superman', '../public/assets/images/Superman.jpg', 'Using his immense solar-fueled powers, he became Superman to defend mankind from oppression while championing truth, justice, and the American way!', '40', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

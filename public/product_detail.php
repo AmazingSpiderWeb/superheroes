@@ -1,20 +1,31 @@
-<?php include '../includes/header.php'; ?>
+<?php 
 
-	<div class="main detail">
-		<a href="view_cart.html" class="viewCart">(2) View Cart</a>
-		<img src="assets/images/Batman.jpg" alt="" />
-		<div class="description">	
-			<h2>Batman</h2>			
-			<p class="intro">Bruce Wayne witnessed the murder of his billionaire parents as a child, swearing to avenge them. He trained extensively to achieve both mental and physical perfection, mastering detective skills, martial arts, and criminal psychology.
-			<br /><br />
-			 Costumed as a bat to prey on criminals' fear and utilizing a high-tech arsenal in his crusade to rid Gotham City of crime, the legendary Batman was born.</p>
-			<span class="price">$39.99</span>
-			<form action="">
-				<input type="text" name="quantity" placeholder="Qty">
-				<input type="submit" name="submit" value="Add to Cart">
-			</form>		
-		</div>
+require_once('../classes/page.php');
+require_once('../classes/form.php');
 
-	</div>
+$form = new Form();
+$product = new Product($_GET['id']);
 
-<?php include '../includes/footer.php'; ?>
+include '../includes/header.php'; 
+
+	echo '<div class="main detail">';
+	echo '<a href="view_cart.php" class="viewCart">(2) View Cart</a>';	
+	echo '<img src="'.$product->image.'" />';
+		echo '<div class="description">';
+		echo '<h2>'.$product->product_name.'</h2>';
+		echo '<p class="intro">'.$product->description.'</p>';
+		echo '<span class="price">$ '.$product->price.'</span>';
+
+		echo $form->open('view_cart.php', 'post', '');
+		echo $form->text('qty', '', 'Qty');	
+		echo $form->submit('submit', 'Add to Cart');	
+		echo $form->close();
+
+		echo '</div>';
+	echo '</div>';
+
+	include '../includes/footer.php'; 
+
+?>
+
+

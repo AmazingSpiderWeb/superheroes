@@ -2,9 +2,12 @@
 
 require_once('database.php');
 require_once('page.php');
+require_once('form.php');
+
+
 $product = new Product($_GET['id']);
 
-class Navigation{
+class Navigation extends Form{
 
 	private $db;
 
@@ -16,6 +19,23 @@ class Navigation{
 		}
 	}
 
+	function make_lists(){
+		$all_of_the_products = $this->get_products();
+
+		foreach($all_of_the_products as $product){
+			# Make the title of the category a link, so that we can edit it.
+			echo '<div class="features">';
+			echo '<a href="product_detail.php?id='.$product['product_id'].'"><img src="'.$product['image'].'" /></a>';
+			echo '<h3>'.$product['product_name'].'</h3>';
+			echo '<p>'.substr($product['description'],0,80).'... <a href="product_detail.php?id='.$product['product_id'].'">Read More +</a>' ;
+			echo '<span class="price">$'.$product['price'].'</span></p>';
+			echo $this->open('cart.php', 'post', '');
+			echo $this->text('qty', '', 'Qty');	
+			echo $this->submit('submit', 'Add to Cart');
+			echo $this->close();
+			echo '</div>';
+		}
+	}
 
 	# Since the navigation sidebar needs to be slightly different for the admin,
 	# we need to make a specialised function for it.
