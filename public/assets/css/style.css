@@ -91,10 +91,10 @@ p.intro{
 	padding: 0 20px;
 	color: #2E2E2E;
 }
-.last{
+.features:nth-of-type(3), .features:nth-of-type(6), .features:nth-of-type(9), .features:nth-of-type(12){
 	margin: 0 0 20px 0;
 }
-.features h3 a{
+.features h3{
 	font-size: 1.5em;
 	padding: 0 20px;
 	font-family: 'Carter One';	
@@ -372,6 +372,7 @@ p.intro a{
 	margin: 0;
 }
 
+
 .form textarea{
 	font-size: 1em;
 	width: 460px;
@@ -380,6 +381,13 @@ p.intro a{
 	margin-bottom: 10px;
 	padding: 10px;
 	height: 120px;
+}
+	
+.form input[type=text]{
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	width: 240px;
+
 }
 
 input[type=text].fname,
