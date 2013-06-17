@@ -1,11 +1,13 @@
 <?php
 
 require_once('database.php');
+
 require_once('page.php');
 require_once('form.php');
 
 
 $product = new Product($_GET['id']);
+
 
 class Navigation extends Form{
 
@@ -50,7 +52,7 @@ class Navigation extends Form{
 			echo '<p>'.substr($product['description'],0,150).'...';
 			echo '<span class="price">$'.$product['price'].'</span></p>';
 			echo '<a href="product_edit_page.php?id='.$product['product_id'].'" class="edit">Edit Page</a>';
-			echo '<a href="" name="delete">Delete</a>';
+			echo '<a href="delete_page.php?id='.$product['product_id'].'" name="delete">Delete</a>';
 			echo '</a></div>';
 
 		}
@@ -60,7 +62,7 @@ class Navigation extends Form{
 
 	# We need a function to get all the categories
 	function get_products(){
-		$products = $this->db->get('product_id, product_name, image, description, price', 'tb_products');
+		$products = $this->db->get('product_id, product_name, image, description, price', 'tb_products', 'hidden = 0');
 		return $products;
 	}
 
@@ -71,11 +73,31 @@ class Navigation extends Form{
 		$products = $this->db->get(
 			'product_name, product_id',
 			'tb_proucts',
-			'product_id = '.$product_id.' ORDER BY product_id ASC' 
+			'product_id = '.$product_id.' AND hidden=0 ORDER BY product_id ASC' 
 		);
 
 
-		return $pages;
+		return $products;
 	}
+
+	function get_page(){
+		$products = $this->db->get('product_id, product_name, image, description, price', 'tb_products', 'hidden = 0');
+		return $products;
+	}
+
+
+	# We also need a function to get all of the pages
+	# for a specific category that we ask for.
+	function get_page_by_page_id($page_id){
+		$products = $this->db->get(
+			'product_name, product_id',
+			'tb_proucts',
+			'product_id = '.$product_id.' AND hidden=0 ORDER BY product_id ASC' 
+		);
+
+
+		return $products;
+	}
+
 
 }
