@@ -1,0 +1,432 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	background: url(../images/background3.jpg) no-repeat top center fixed;
+	background-color: #000000;
+	padding: 50px 0 0 0;
+}
+
+.container{
+	width: 960px;
+	margin: 0 auto;
+
+}
+
+.header{
+	width: 960px;
+	padding: 0 0 20px 0;
+	border-bottom: 1px dotted #344d54;
+}
+
+.logo{
+	width: 601px;
+	height: 201px;
+	display: block;
+	margin: 0 auto;
+	background: url(../images/superhero_logo.png) no-repeat;
+}
+.hideText{
+	margin-left:-999999px;
+}
+.header ul{
+	margin: 20px auto 0;
+	padding: 0;	
+	width: 500px;
+}
+
+.header ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 0 0 20px;
+	
+}
+
+.header ul li a{
+	text-decoration: none;
+	display: block;
+	padding:5px;
+	color: #70aaba;
+	text-transform: uppercase;
+	font-family: 'Carter One';
+	font-size: 1.5em;
+}
+a.viewCart{
+	position: absolute;
+	right: 0;
+	top: 10px;
+	color: #fff;
+}
+.main{
+	width: 960px;
+	clear: both;	 
+	overflow: auto;
+	position: relative;
+	min-height: 400px;
+}
+h2{
+	font-size: 2.5em;
+	color: #fff;
+	font-family: 'Carter One';
+	margin: 20px 0 0 0;
+}
+p.intro{
+	font-size: 1.2em;
+	color: #ccc;
+	margin: 10px 0 30px 0;
+}
+.features{
+	width: 306px;
+	float: left;
+	margin: 0 20px 20px 0;
+	height: 600px;
+	background: #fff;
+}
+.features a{
+	color: red;
+}
+.features p{
+	padding: 0 20px;
+	color: #2E2E2E;
+}
+.features:nth-of-type(3), .features:nth-of-type(6), .features:nth-of-type(9), .features:nth-of-type(12){
+	margin: 0 0 20px 0;
+}
+.features h3{
+	font-size: 1.5em;
+	padding: 0 20px;
+	font-family: 'Carter One';	
+	color: black;
+	text-decoration: none;
+}
+form{
+	padding: 0 20px;
+}
+.footer{
+	text-align: center;
+	width: 960px;
+	padding:20px;
+	color: #333;
+	font-size: 0.8em;
+}
+input[type="text"]{
+	padding: 5px;
+	height: 30px;
+	width: 80px;
+}
+input[type="submit"]{
+	height: 30px;
+	border: 0;
+	background: #000;
+	color: #fff;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.price{
+	display: block;
+	font-size: 1.5em;
+	color: #3084A6;
+	font-weight: bold;
+}
+
+
+/* DETAIL PAGE*/
+.detail{
+	padding: 0 0 50px 0;
+	background: #fff;
+}
+.detail a.viewCart{
+	color: #000;
+	position: absolute;
+	right: 0;
+	top: 10px;
+	margin: 10px 50px 0 0;
+}
+.detail h2{
+	margin: 0 0 20px 0;
+	color: #333;
+	font-size: 3em;
+}
+.detail p.intro{
+	font-size: 1em;
+}
+.description{
+	float: left;
+	width: 540px;	
+	padding: 20px;
+}
+.detail img{
+	float: left;
+	padding: 40px;
+}
+
+.detail p{
+	color: #666;
+}
+.detail form{
+	margin: 20px 0 0 0;
+	padding: 0;
+}
+.detail input[type="text"]{
+	
+}
+.detail .price{
+	font-size: 2em;
+}
+
+/* DETAIL PAGE END*/
+
+/* VIEW CART */
+.viewCart{
+	background: none;
+	padding: 0 0 50px 0;
+}
+.row{
+	background: #fff;
+	padding: 20px;
+	overflow: auto;
+	display: table;
+	width: 960px;
+	margin: 0 0 1px 0;
+}
+.row img{
+	float: left;
+	width: 150px;
+	margin: 0 30px 0 0;
+	display: table-cell;
+	vertical-align: middle;
+}
+.row h2{
+	color: #333;
+	margin: 0;
+	font-size: 1.8em;
+	display: table-cell;
+	vertical-align: middle;
+}
+.row .title{
+	width: 400px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.row .title a{
+	color: red;
+}
+.row .price{
+	width: 100px;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 1.8em;
+}
+.row .qty{
+	width: 100px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.row .update{
+	width: 100px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.row .total{
+	width: 100px;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: right;
+	padding: 0 50px;
+	color: #8F8F8F;
+}
+.row .totalPrice{
+	width: 100px;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 2em;
+	font-weight: bold;
+}
+input[type="submit"].checkout{
+	float: right;
+	height: 40px;
+	display: block;
+	background: #4A9428;
+	margin: 20px 0 0 0;
+	color: #000;
+	font-weight: bold;
+}
+
+
+
+/* VIEW CART END */
+
+
+/* ADMAIN CSS*/
+a.addProduct{
+	position: absolute;
+	right: 0;
+	top: 10px;
+	color: yellow;
+}
+p.intro a{
+	color: red;
+	font-weight: normal;
+}
+.editForm label{
+	font-weight: bold;
+	display: block;
+	margin: 0 0 10px 0;
+}
+.editForm input[type="text"]{
+	padding: 10px;
+	width: 200px;
+	margin: 0 0 10px 0;
+}
+.editForm textarea{
+	width: 500px;
+	padding: 10px;
+	font-family: Arial;
+	height: 200px;
+	margin: 0 0 10px 0;
+}
+.editForm input[type="submit"]{
+	margin: 20px 0 0 0;
+}
+/* ADMAIN CSS END*/
+
+/* ABOUT US*/
+
+.recommend{
+	padding: 20px;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 20px;
+	background: #70aaba;
+	float: left;
+	display: inline-block;
+	width: 380px;
+	margin: 20px;
+}
+
+.recommend span{
+	font-weight: 700;
+	font-style: italic;
+	color: white;
+}
+
+.recommend p{
+	color: white;
+}
+
+
+
+/* ABOUT US PAGE END*/
+
+
+/* CONTACT US PAGE */
+
+.form input[type=text]{
+	font-size: 1em;
+	width: 460px;
+	border: none;
+	background: #d7d7d7;
+	margin-bottom: 10px;
+	height: 40px;
+	padding: 10px;
+}
+.form{
+	width: 500px;
+	padding: 0 20px 20px 20px;
+	position: relative;
+	display: inline-block;
+	height: 340px;
+	float: left;
+}
+
+.form form{
+	margin: 0;
+}
+
+.subheading{
+	padding: 20px;
+}
+
+.content{
+	width: 460px;
+	display: inline-block;
+	padding: 0 20px;
+	line-height: 1.5em;
+	float: left;
+}
+
+.content pre{
+	margin: 0;
+	font-family: "Lato";
+	font-size: 1em;
+	font-weight: 400;
+	color: #666;
+}
+
+.content p{
+	margin: 0;
+}
+
+
+.form textarea{
+	font-size: 1em;
+	width: 460px;
+	border: none;
+	background: #d7d7d7;
+	margin-bottom: 10px;
+	padding: 10px;
+	height: 120px;
+}
+	
+.form input[type=text]{
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	width: 240px;
+
+}
+
+input[type=text].fname,
+input[type=text].lname,
+input[type=text].phone,
+input[type=text].country{
+	width: 226px;
+	display: inline-block;
+}
+
+input[type=text].lname,
+input[type=text].country{
+	margin-left: 5px;
+}
+
+#submitbutton{
+	padding: 10px;
+	display: inline-block;
+	margin-right: 20px;
+	width: 200px;
+	height: 40px;
+}
+
+.map{
+	width: 920px;
+}
+
+.map img{
+	margin: 0;
+	padding: 20px;
+}
+
+.superheroGroup img{
+	margin: 0;
+	padding: 0;
+}
+
+
+/* CONTACT US PAGE END */
+
+
+
