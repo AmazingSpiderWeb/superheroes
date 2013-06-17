@@ -4,8 +4,8 @@ class Form{
 
 
 	# this function creates a new form tag
-	function open($action, $method){
-		return '<form action="'.$action.'" method="'.$method.'">';
+	function open($action, $method, $class){
+		return '<form action="'.$action.'" method="'.$method.'" class="'.$class.'">';
 	}
 
 
