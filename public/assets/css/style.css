@@ -90,7 +90,7 @@ p.intro{
 	padding: 0 20px;
 	color: #2E2E2E;
 }
-.last{
+.features:nth-of-type(3), .features:nth-of-type(6), .features:nth-of-type(9), .features:nth-of-type(12){
 	margin: 0 0 20px 0;
 }
 .features h3 a{
@@ -356,7 +356,7 @@ p.intro a{
 	color: white;
 }
 
-input[type=text]{
+.form input[type=text]{
 	font-size: 1.2em;
 	margin-bottom: 1em;
 	width: 240px;
