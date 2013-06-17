@@ -11,7 +11,7 @@
 
 	echo '<h2>'.$page->title.'</h2>';
 
-	echo '<p>'.$page->content.'</p>';
+	echo '<p>'.nl2br($page->content).'</p>';
 
 	echo '<a href="admin_page_edit.php?id='.$page->page_id.'">Edit</a></p>';
 
