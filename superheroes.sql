@@ -96,3 +96,8 @@ INSERT INTO `tb_products` (`product_id`, `product_name`, `image`, `description`,
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+images/CaptainAmerica.jpg', 'Too scrawny and frail to enlist in the U.S. Military during World War II, Steve Rogers volunteered to receive the experimental Super-Soldier Serum. Enhanced to the pinnacle of human physical potential he became Captain America.', 30, 0),
+(3, 'Hulk', '../public/assets/images/Hulk.jpg', 'The Incredible Hulk: a green behemoth who is the living personification of rage and pure physical strength.', 40, 0),
+(4, 'Ironman', '../public/assets/images/Ironman.jpg', 'After he was kidnapped by terrorists and gravely injured, billionaire iTony Stark was pressured to create a weapon of mass destruction. Now vowing to protect a world he helped endanger, he became the Invincible Iron Man.', 40, 0),
+(5, 'Spiderman', '../public/assets/images/Spiderman.jpg', 'He is one super-hero who has not lost the common touch, and in fact he is frequently described as "your friendly neighbourhood Spider-Man."', 40, 0),
+(6, 'Superman', '../public/assets/images/Superman.jpg', 'Using his immense solar-fueled powers, he became Superman to defend mankind from oppression while championing truth, justice, and the American way!', 40, 0);
