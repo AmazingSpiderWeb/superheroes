@@ -62,7 +62,6 @@ a.viewCart{
 .main{
 	width: 960px;
 	clear: both;	 
-	overflow: auto;
 	position: relative;
 	min-height: 400px;
 }
@@ -110,6 +109,9 @@ form{
 	padding:20px;
 	color: #333;
 	font-size: 0.8em;
+}
+.clear{
+	clear: both;
 }
 input[type="text"]{
 	padding: 5px;
@@ -296,6 +298,25 @@ p.intro a{
 .editForm input[type="submit"]{
 	margin: 20px 0 0 0;
 }
+a.edit{
+	display: block;
+	float: left;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+	padding: 5px;
+	margin: 0 0 0 20px;
+}
+a.edit:hover{
+	background: red;
+	color: #fff;
+}
+a.delete{
+	float: right;
+	display: block;
+	margin: 0 20px 0 0;
+	padding: 5px;
+}
 /* ADMAIN CSS END*/
 
 /* ABOUT US*/
@@ -377,14 +398,16 @@ p.intro a{
 
 
 .form textarea{
-	font-size: 1em;
+	font-size: 1.2em;
 	width: 460px;
 	border: none;
 	background: #d7d7d7;
 	margin-bottom: 10px;
 	padding: 10px;
 	height: 120px;
+	font-family: Arial;
 }
+
 	
 .form input[type=text]{
 	font-size: 1.2em;

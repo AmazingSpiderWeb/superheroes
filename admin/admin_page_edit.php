@@ -10,28 +10,29 @@ include('../includes/admin_header.php');
 
 	echo '<div class="main detail">';
 
-	echo '<div class="description">';
-	echo $form->open('update_admin_page.php', 'post', 'editForm');
+		echo '<div class="description">';
+			echo $form->open('update_admin_page.php', 'post', 'editForm');
 
-	echo $form->label('title', 'Title');	
+			echo $form->label('title', 'Title');	
 
-	echo $form->text('title', $page->title);
-	echo $form->hidden('page_id', $page->page_id);
-	echo $form->hidden('location', $page->location);
+			echo $form->text('title', $page->title);
+			echo $form->hidden('page_id', $page->page_id);
+			echo $form->hidden('location', $page->location);
 
 
-	echo $form->label('content', 'Content');
+			echo $form->label('content', 'Content');
 
-	echo $form->textarea('content', $page->content);
+			echo $form->textarea('content', $page->content);
 
-	echo '<br>';
-	
+			echo '<br>';
+			
 
-		echo $form->submit('submit', 'SAVE');
-	echo $form->close();
+				echo $form->submit('submit', 'SAVE');
+			echo $form->close();
 
-	echo '</div>';
+		echo '</div>';
 
+	echo '<div class="clear"></div>';
 	echo '</div>';
 
 	include '../includes/footer.php'; 

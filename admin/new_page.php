@@ -13,29 +13,30 @@ echo '<div class="main detail">';
 
 	echo '<div class="description">';
 
-	echo $form->open('save_new_page.php', 'post', 'editForm');
-		echo $form->label('product_name', 'Product Name');
-		echo $form->text('product_name');
+		echo $form->open('save_new_page.php', 'post', 'editForm');
+			echo $form->label('product_name', 'Product Name');
+			echo $form->text('product_name');
 
-		echo $form->hidden('id', $product->product_id);
+			echo $form->hidden('id', $product->product_id);
 
-		echo $form->label('description', 'Description');
+			echo $form->label('description', 'Description');
 
-		echo $form->textarea('description');
+			echo $form->textarea('description');
 
-		echo $form->label('price', 'Price');
+			echo $form->label('price', 'Price');
 
-		echo $form->text('price');
+			echo $form->text('price');
 
-		echo $form->label('image', 'Image URL');
-		echo $form->text('image', "../public/assets/images/upload.jpg");
+			echo $form->label('image', 'Image URL');
+			echo $form->text('image', "../public/assets/images/upload.jpg");
 
-		echo '<br>';
-		
+			echo '<br>';
+			
 
-			echo $form->submit('submit', 'CREATE');
-	echo $form->close();
-echo '</div>';
+				echo $form->submit('submit', 'CREATE');
+		echo $form->close();
+	echo '</div>';
+echo '<div class="clear"></div>';
 echo '</div>';
 
 

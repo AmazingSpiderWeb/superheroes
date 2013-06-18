@@ -1,4 +1,12 @@
-<?php include '../includes/header.php'; 
+<?php 
+require_once('../classes/navigation.php');
+require_once('../classes/page_admin.php');
+
+$nav = new Navigation();
+$page = new Page(1);
+
+
+include '../includes/header.php'; 
 include('../includes/product_page.php');
 
 $product = new Product($_GET['id']);

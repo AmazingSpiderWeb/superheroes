@@ -47,12 +47,12 @@ class Navigation extends Form{
 		foreach($all_of_the_products as $product){
 			# Make the title of the category a link, so that we can edit it.
 			echo '<div class="features">';
-			echo '<img src="'.$product['image'].'" />';
+			echo '<a href="product_edit_page.php?id='.$product['product_id'].'"><img src="'.$product['image'].'" /></a>';
 			echo '<h3>'.$product['product_name'].'</h3>';
-			echo '<p>'.substr($product['description'],0,150).'...';
+			echo '<p>'.substr($product['description'],0,100).'...';
 			echo '<span class="price">$'.$product['price'].'</span></p>';
 			echo '<a href="product_edit_page.php?id='.$product['product_id'].'" class="edit">Edit Page</a>';
-			echo '<a href="delete_page.php?id='.$product['product_id'].'" name="delete" onclick="return confirm(\'Are you sure you want to delete this?\');">Delete</a>';
+			echo '<a href="delete_page.php?id='.$product['product_id'].'" name="delete" onclick="return confirm(\'Are you sure you want to delete this?\');"  class="delete">Delete</a>';
 			echo '</a></div>';
 
 		}
