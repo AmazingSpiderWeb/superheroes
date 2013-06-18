@@ -36,7 +36,7 @@ include('../includes/admin_header.php');
 	
 
 		echo $form->submit('submit', 'SAVE');
-		echo '<a href="delete_page.php?id='.$product->product_id.'" class="delete">Delete</a>';
+		echo '<a href="delete_page.php?id='.$product->product_id.'" class="delete" onclick="return confirm(\'Are you sure you want to delete this?\');">Delete</a>';
 	echo $form->close();
 
 	echo '</div>';
