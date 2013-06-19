@@ -1,8 +1,11 @@
 <?php
 
 require_once('../classes/page.php');
+require_once('../classes/upload.php');
 
 $product = new Product();
+$upload = new Upload();
+
 
 # Handle the form submit
 if(isset($_POST['submit'])){
@@ -14,12 +17,17 @@ if(isset($_POST['submit'])){
 
 	$product->price = $_POST['price'];
 
-	$product->image = $_POST['image'];
+	$upload->upload_to('../public/assets/images/uploads');
+	
+	$product->image = $upload->file_name();
+
+	
 
 	$product->product_id = $_POST['id'];
 
 	$product->save();
 
 }
+
 
 header('location: index.php');

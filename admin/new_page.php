@@ -3,17 +3,22 @@
 require_once('../classes/page.php');
 require_once('../classes/form.php');
 
+
 $form = new Form();
 $product = new Product();
 
+
 include('../includes/admin_header.php'); 
+
+
 
 echo '<div class="main detail">';
 	echo '<img src="../public/assets/images/upload.jpg" />';
 
 	echo '<div class="description">';
 
-		echo $form->open('save_new_page.php', 'post', 'editForm');
+		echo $form->open('save_new_page.php', 'post', 'editForm', 'multipart/form-data');
+			
 			echo $form->label('product_name', 'Product Name');
 			echo $form->text('product_name');
 
@@ -28,7 +33,8 @@ echo '<div class="main detail">';
 			echo $form->text('price');
 
 			echo $form->label('image', 'Image URL');
-			echo $form->text('image', "../public/assets/images/upload.jpg");
+			echo $form->file('image');
+			echo $form->hidden('MAX_FILE_SIZ', "10000000");
 
 			echo '<br>';
 			

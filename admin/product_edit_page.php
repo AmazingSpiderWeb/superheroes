@@ -6,11 +6,14 @@ require_once('../classes/form.php');
 $form = new Form();
 $product = new Product($_GET['id']);
 
+
+
+
 include('../includes/admin_header.php'); 
 
 	echo '<div class="main detail">';
 
-	echo '<img src="'.$product->image.'" />';
+	echo '<img src="../public/assets/images/uploads/'.$product->image.'" />';
 
 		echo '<div class="description">';
 			echo $form->open('update_page.php', 'post', 'editForm');
@@ -26,7 +29,6 @@ include('../includes/admin_header.php');
 			echo $form->textarea('description', $product->description);
 
 			echo $form->label('price', 'Price');
-
 			echo $form->text('price', $product->price);
 
 			echo $form->label('image', 'Image URL');

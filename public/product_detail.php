@@ -11,7 +11,7 @@ include '../includes/header.php';
 
 	echo '<div class="main detail">';
 	echo '<a href="view_cart.php" class="viewCart">(2) View Cart</a>';	
-	echo '<img src="'.$product->image.'" />';
+	echo '<img src="../public/assets/images/uploads/'.$product->image.'" />';
 		echo '<div class="description">';
 		echo '<h2>'.$product->product_name.'</h2>';
 		echo '<p class="intro">'.$product->description.'</p>';

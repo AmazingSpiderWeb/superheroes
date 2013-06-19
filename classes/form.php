@@ -4,8 +4,8 @@ class Form{
 
 
 	# this function creates a new form tag
-	function open($action, $method, $class){
-		return '<form action="'.$action.'" method="'.$method.'" class="'.$class.'">';
+	function open($action, $method, $class, $enctype=""){
+		return '<form action="'.$action.'" method="'.$method.'" class="'.$class.'" enctype="'.$enctype.'">';
 	}
 
 
@@ -25,6 +25,11 @@ class Form{
 	function text($name, $value = '', $placeholder = ''){
 		return '<input type="text" id="'.$name.'" name="'.$name.'" value="'.$value.'" placeholder="'.$placeholder.'">';
 	}
+
+	function file($name){
+		return '<input type="file" name="'.$name.'" >';
+	}
+
 
 	# this function makes a new hidden input tag
 	function hidden($name, $value = ''){

@@ -27,7 +27,7 @@ class Navigation extends Form{
 		foreach($all_of_the_products as $product){
 			# Make the title of the category a link, so that we can edit it.
 			echo '<div class="features">';
-			echo '<a href="product_detail.php?id='.$product['product_id'].'"><img src="'.$product['image'].'" /></a>';
+			echo '<a href="product_detail.php?id='.$product['product_id'].'"><img src="../public/assets/images/uploads/'.$product['image'].'" /></a>';
 			echo '<h3>'.$product['product_name'].'</h3>';
 			echo '<p>'.substr($product['description'],0,80).'... <a href="product_detail.php?id='.$product['product_id'].'">Read More +</a>' ;
 			echo '<span class="price">$'.$product['price'].'</span></p>';
@@ -47,7 +47,7 @@ class Navigation extends Form{
 		foreach($all_of_the_products as $product){
 			# Make the title of the category a link, so that we can edit it.
 			echo '<div class="features">';
-			echo '<a href="product_edit_page.php?id='.$product['product_id'].'"><img src="'.$product['image'].'" /></a>';
+			echo '<a href="product_edit_page.php?id='.$product['product_id'].'"><img src="../public/assets/images/uploads/'.$product['image'].'" /></a>';
 			echo '<h3>'.$product['product_name'].'</h3>';
 			echo '<p>'.substr($product['description'],0,100).'...';
 			echo '<span class="price">$'.$product['price'].'</span></p>';

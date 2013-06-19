@@ -8,7 +8,7 @@ include('../includes/admin_header.php');
 
 	echo '<div class="main detail">';
 
-		echo '<img src="'.$product->image.'" />';
+		echo '<img src="assets/images/upload'.$product->image.'" />';
 
 	echo '<div class="description">';
 
