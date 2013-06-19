@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="main">
 
 	<a href="add_to_cart.php" class="addProduct">+ ADD A PRODUCT</a>
@@ -9,6 +10,16 @@
 	$nav = new Navigation();
 ?>
 
+=======
+<?php   
+
+	echo '<div class="main">';
+	echo '<a href="view_cart.php" class="viewCart">(0) View Cart</a>'; 
+	echo '<h2>'.$page->title.'</h2>'; 
+
+	echo '<p class="intro">'.$page->content.'';
+	?>
+>>>>>>> 0f15a060c2b818338a3100b8792a9fc6fd99028d
 
 <?php $nav->make_lists(); ?>
 

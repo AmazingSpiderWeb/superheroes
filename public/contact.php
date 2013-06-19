@@ -1,4 +1,11 @@
-<?php include '../includes/header.php'; ?>
+<?php 
+include '../includes/header.php'; 
+require_once('../classes/page_admin.php');
+
+$page = new Page(3);
+
+?>
+
 
 	<div class="main detail">
 		<h2 class="subheading">Contact Us</h2>
@@ -14,19 +21,13 @@
 			</form>
 		</div>
 		<div class="content">
-			<p>You can contact us using the form to the left or alternatively by taking advantage of the contact information beneath.</p><br>
-			
-<pre>
-Phone:	+64 9 634 4399
-Email:		info@amazingsuperheroes.co.nz
-Address:	264 The Mall,
-			Onehunga, Auckland, 
-			New Zealand</pre>
+			<pre><?php echo $page->content ?></pre>
 
 		</div>
 		<div class="map">
 			<img src="assets/images/super_map.jpg" alt="">
 		</div>
+		<div class="clear"></div>
 	</div>
 
 			

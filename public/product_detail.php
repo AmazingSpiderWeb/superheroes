@@ -6,6 +6,10 @@ require_once('../classes/form.php');
 $form = new Form();
 $product = new Product($_GET['id']);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0f15a060c2b818338a3100b8792a9fc6fd99028d
 include '../includes/header.php'; 
 
 	echo '<div class="main detail">';

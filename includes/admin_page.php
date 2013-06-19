@@ -20,7 +20,11 @@
 
 	echo '<p class="intro">'.$page->content.'';
 
+<<<<<<< HEAD
 	echo '<a href="admin_page_edit.php?id='.$page->page_id.'">Edit</a></p>';
+=======
+	echo ' <a href="admin_page_edit.php?id='.$page->page_id.'">Edit</a></p>';
+>>>>>>> 0f15a060c2b818338a3100b8792a9fc6fd99028d
 
 ?>
 
