@@ -17,8 +17,9 @@ echo '<div class="main detail">';
 
 	echo '<div class="description">';
 
+
 		echo $form->open('save_new_page.php', 'post', 'editForm', 'multipart/form-data');
-			
+
 			echo $form->label('product_name', 'Product Name');
 			echo $form->text('product_name');
 

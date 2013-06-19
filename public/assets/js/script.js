@@ -1,31 +1,53 @@
 // these variables directly correspond with the input
 // field and button
-var submitButton = document.getElementById('submit1');
-var qtyInput = document.getElementById('quantity');
+var submitButton = document.getElementById('submit');
+var fnameInput = document.getElementById('fname');
+var lnameInput = document.getElementById('lname');
+var phoneInput = document.getElementById('phone');
+var countryInput = document.getElementById('country');
+var emailInput = document.getElementById('email');
 
-var qtyMessage = document.getElementById('quantity');
+var fnameMessage = document.getElementById('fnameMessage');
+var lnameMessage = document.getElementById('lnameMessage');
+var phoneMessage = document.getElementById('phoneMessage');
+var countryMessage = document.getElementById('countryMessage');
 
 var valid = {
-	quantity: false
+	fname: false,
+	lname: false,
+	phone: false,
+	country: false,
+	email: false
 };
 
 
 var validate = {
-	quantity: function(value){
-		// this pattern matches digits only
-		var pattern = /^[0-9]{1,3}$/;
+	fname: function(value){
+		// pattern to match alphabet and some characters
+		// used in names
+		var pattern = /^[A-Za-z' -]+$/;
 		// the test will equal either true or false
 		// depending on if it matches or not.
 		return pattern.test(value);
-	}
+	},
+
+	lname: function(value){
+		// pattern to match alphabet and some characters
+		// used in names
+		var pattern = /^[A-Za-z' -]+$/;
+		// the test will equal either true or false
+		// depending on if it matches or not.
+		return pattern.test(value);
+	},
+
 };
 
 
-// when we click the add to cart button, we are going to
-// check if the quantity is valid.
+// when we click the add to submit button, we are going to
+// check if the name is valid.
 
 submitButton.onclick = function(){
-	if(valid.quantity){
+	if(valid.fname && valid.lname){
 		return true;
 	}else{
 		return false;
@@ -33,20 +55,37 @@ submitButton.onclick = function(){
 }
 
 
-// when we click add to cart
+// when we tab out (or click somewhere else)
 // we do the validation immediately
 
-qtyInput.onclick = checkQuantity;
+fnameInput.onkeyup = checkFname;
+fnameInput.onblur = checkFname;
 
-function checkQuantity(){
+function checkFname(){
 	// do the validation
-	if(validate.quantity(qtyInput.value)){
-		qtyInput.className = '';
-		qtyMessage.innerHTML = '';
-		valid.quantity = true;
+	if(validate.fname(fnameInput.value)){
+		fnameInput.className = '';
+		fnameMessage.innerHTML = '';
+		valid.fname = true;
 	}else{
-		qtyInput.className = 'error';
-		qtyMessage.innerHTML = 'The quantity can only have digits'
-		valid.quantity = false;
+		fnameInput.className = 'error';
+		fnameMessage.innerHTML = 'invalid name'
+		valid.fname = false;
+	}
+}
+
+lnameInput.onkeyup = checkLname;
+lnameInput.onblur = checkLname;
+
+function checkLname(){
+	// do the validation
+	if(validate.lname(lnameInput.value)){
+		lnameInput.className = '';
+		lnameMessage.innerHTML = '';
+		valid.lname = true;
+	}else{
+		lnameInput.className = 'error';
+		lnameMessage.innerHTML = 'invalid name'
+		valid.lname = false;
 	}
 }

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<?php include '../includes/header.php'; 
+=======
 <?php 
 require_once('../classes/navigation.php');
 require_once('../classes/page_admin.php');
@@ -7,6 +10,7 @@ $page = new Page(1);
 
 
 include '../includes/header.php'; 
+>>>>>>> 0f15a060c2b818338a3100b8792a9fc6fd99028d
 include('../includes/product_page.php');
 
 $product = new Product($_GET['id']);
