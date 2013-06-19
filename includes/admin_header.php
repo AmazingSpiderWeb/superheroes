@@ -13,9 +13,9 @@
 	<div class="header">
 		<a href="../public/index.php" class="logo"><span class="hideText">Amazing Super Heroes</span></a>
 		<ul>
-			<li><a href="../public/index.php">Super Heroes</a></li>
-			<li><a href="../public/about.php">About Us</a></li>			
-			<li><a href="../public/contact.php">Contact</a></li>
+			<li><a href="index.php">Super Heroes</a></li>
+			<li><a href="admin_about.php">About Us</a></li>			
+			<li><a href="admin_contact.php">Contact</a></li>
 		</ul>
 	</div>
 

@@ -59,7 +59,8 @@ class Product{
 				array(
 					'product_name' => $this->product_name,
 					'description' => $this->description,
-					'price' => $this->price
+					'price' => $this->price,
+					'image' =>$this->image
 				)
 			);
 		}
@@ -80,17 +81,34 @@ class Product{
 			'tb_products',
 			array('product_name' =>$this->product_name, 
 			'description' =>$this->description,
-			'price' =>$this->price),
+			'price' =>$this->price, 'image' =>$this->image),
 			array('product_id' => $this->product_id)
 		);
 	}	
 
 	function hide(){
 		$this->db->update(
-			'tb_pages',
+			'tb_products',
 			array( 'hidden' => 1),
-			array('page_id' => $this->id)
+			array('product_id' => $this->product_id)
 			);
 		}
 	}
+	
+	// <script type="text/javascript">
+	//     function check(){
+	//     var question = confirm("Are you sure?");
+	//     if(question){
+
+	//     return true;
+
+	//     }else{
+
+	//     alert("Thanks for not choosing to delete");
+	//     return false;
+
+	//     }
+
+	//     }
+	// </script>
 

@@ -22,8 +22,8 @@ class Form{
 
 
 	# this function makes a new text input tag
-	function text($name, $value = ''){
-		return '<input type="text" id="'.$name.'" name="'.$name.'" value="'.$value.'" >';
+	function text($name, $value = '', $placeholder = ''){
+		return '<input type="text" id="'.$name.'" name="'.$name.'" value="'.$value.'" placeholder="'.$placeholder.'">';
 	}
 
 	# this function makes a new hidden input tag
