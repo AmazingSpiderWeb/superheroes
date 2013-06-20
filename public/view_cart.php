@@ -1,61 +1,51 @@
+<?php
+
+session_start();
+require_once('../classes/page.php');
+require_once('../classes/cart.php');
+
+$product = new Product($_GET['id']);
+$cart = new Cart();
+
+?>
 <?php include '../includes/header.php'; ?>
 
-	<div class="main viewCart">
-		<div class="row">
-			<img src="assets/images/Batman.jpg" alt="" />
-			<div class="title">
-				<h2>Batman</h2><a href="">Delete</a>
-			</div>
-			<div class="price">
-				$39.99
-			</div>
-			<div class="qty">
-				<form action="">
-					<input type="text" name="quantity" placeholder="Qty">
-				</form>	
-			</div>
-			<div class="update">
-				<form action="">
-					<input type="submit" name="submit" value="Update Cart">
-				</form>	
-			</div>	
-		</div>
-		<div class="row">
-			<img src="assets/images/CaptainAmerica.jpg" alt="" />
-			<div class="title">
-				<h2>Captain America</h2><a href="">Delete</a>
-			</div>
-			<div class="price">
-				$39.99
-			</div>
-			<div class="qty">
-				<form action="">
-					<input type="text" name="quantity" placeholder="Qty">
-				</form>	
-			</div>
-			<div class="update">
-				<form action="">
-					<input type="submit" name="submit" value="Update Cart">
-				</form>	
-			</div>	
-		</div>
-		<div class="row">
-			<div class="title">			
-			</div>
-			<div class="price">
-				
-			</div>
-			<div class="total">
-				Total
-			</div>
-			<div class="totalPrice">
-				$79.98
-			</div>	
-		</div>
-		<form action="">
-			<input type="submit" class="checkout" name="submit" value="Proceed to Checkout">
-		</form>	
-		
+	<div class="main">
+
+		<table class="viewCart" width="100%">
+			<tr>
+				<th width="20%"></th>
+				<th width="50%">Product</th>
+				<th width="10%">Price</th>
+				<th width="10%">Quantity</th>
+				<th width="10%">Total</th>
+			</tr>
+			<?php if($products = $cart->get_all()): ?>
+				<?php foreach ($products as $product): ?>
+					<tr>						
+						<td><a href="product_detail.php?id=<?php echo $product['id']; ?>"><img src="assets/images/uploads/<?php echo $product['image']; ?>" alt="" width="150"></a>						
+						</td>
+						<td><h2><a href="product_detail.php?id=<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a></h2><a href="delete_item.php?id=<?php echo $product['id']; ?>" class="delete">Delete</a></td>
+						<td><span class="price">$ <?php echo $product['price']; ?></span></td>
+						<td><?php echo $product['quantity']; ?></td>
+						<td>$ <?php echo $product['price'] * $product['quantity']; ?></td>
+					</tr>
+				<?php endforeach ?>
+				<tr>
+					<td colspan="4" align="right"><strong>Grand Total</strong></td>
+					<td>$ <?php echo $cart->total_price(); ?></td>
+				</tr>
+				<tr >
+					<td colspan="3"><a href="clear_cart.php" class="clearCart">Clear</a></td>
+					<td colspan="2" align="right"><a href="" class="checkout">Proceed to Checkout</a></td>
+				</tr>
+			<?php else: ?>
+				<tr>
+					<td colspan="5">There are no products to display</td>
+				</tr>
+			<?php endif; ?>
+		</table>
+	
 
 	</div>
 

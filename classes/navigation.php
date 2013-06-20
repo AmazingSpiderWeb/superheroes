@@ -30,11 +30,7 @@ class Navigation extends Form{
 			echo '<a href="product_detail.php?id='.$product['product_id'].'"><img src="../public/assets/images/uploads/'.$product['image'].'" /></a>';
 			echo '<h3>'.$product['product_name'].'</h3>';
 			echo '<p>'.substr($product['description'],0,80).'... <a href="product_detail.php?id='.$product['product_id'].'">Read More +</a>' ;
-			echo '<span class="price">$'.$product['price'].'</span></p>';
-			echo $this->open('cart.php', 'post', '');
-			echo $this->text('qty', '', 'Qty');	
-			echo $this->submit('submit', 'Add to Cart');
-			echo $this->close();
+			echo '<span class="price">$'.$product['price'].'</span></p>';			
 			echo '</div>';
 		}
 	}
@@ -52,11 +48,8 @@ class Navigation extends Form{
 			echo '<p>'.substr($product['description'],0,100).'...';
 			echo '<span class="price">$'.$product['price'].'</span></p>';
 			echo '<a href="product_edit_page.php?id='.$product['product_id'].'" class="edit">Edit Page</a>';
-<<<<<<< HEAD
-			echo '<a href="delete_page.php?id='.$product['product_id'].'" name="delete" onclick="return confirm(\'Are you sure you want to delete this?\');">Delete</a>';
-=======
+
 			echo '<a href="delete_page.php?id='.$product['product_id'].'" name="delete" onclick="return confirm(\'Are you sure you want to delete this?\');"  class="delete">Delete</a>';
->>>>>>> 0f15a060c2b818338a3100b8792a9fc6fd99028d
 			echo '</a></div>';
 
 		}

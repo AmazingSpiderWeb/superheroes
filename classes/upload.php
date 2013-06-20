@@ -9,8 +9,6 @@ class Upload{
 		
 	}
 
-
-
 	public function file_name(){
 		return $_FILES['image']['name'];
 	}

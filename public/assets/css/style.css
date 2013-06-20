@@ -80,7 +80,7 @@ p.intro{
 	width: 306px;
 	float: left;
 	margin: 0 20px 20px 0;
-	height: 600px;
+	height: 550px;
 	background: #fff;
 }
 .features a{
@@ -185,85 +185,61 @@ input[type="submit"]{
 /* DETAIL PAGE END*/
 
 /* VIEW CART */
-.viewCart{
-	background: none;
+table.viewCart{
+	background: #fff;
 	padding: 0 0 50px 0;
 }
-.row{
-	background: #fff;
+table.viewCart th{
 	padding: 20px;
-	overflow: auto;
-	display: table;
-	width: 960px;
-	margin: 0 0 1px 0;
+	background: #E8E8E8;
 }
-.row img{
+table.viewCart td{
+	padding: 20px;
+	border-bottom: 1px solid #E8E8E8;
+}
+table.viewCart img{
 	float: left;
-	width: 150px;
-	margin: 0 30px 0 0;
-	display: table-cell;
-	vertical-align: middle;
+	margin: 0 20px 0 0;
 }
-.row h2{
+table.viewCart h2{
+	font-size: 1em;
+}
+table.viewCart h2 a{
 	color: #333;
 	margin: 0;
+	float: left;
 	font-size: 1.8em;
-	display: table-cell;
-	vertical-align: middle;
+	text-decoration: none;
 }
-.row .title{
-	width: 400px;
-	display: table-cell;
-	vertical-align: middle;
+table.viewCart h2 a:hover{
+	color: #70aaba;
 }
-.row .title a{
+table.viewCart a.delete{
 	color: red;
+	float: none;
+	clear: both;
 }
-.row .price{
-	width: 100px;
-	display: table-cell;
-	vertical-align: middle;
-	font-size: 1.8em;
-}
-.row .qty{
-	width: 100px;
-	display: table-cell;
-	vertical-align: middle;
-}
-.row .update{
-	width: 100px;
-	display: table-cell;
-	vertical-align: middle;
-}
-.row .total{
-	width: 100px;
-	display: table-cell;
-	vertical-align: middle;
-	font-size: 2em;
-	font-weight: bold;
-	text-align: right;
-	padding: 0 50px;
-	color: #8F8F8F;
-}
-.row .totalPrice{
-	width: 100px;
-	display: table-cell;
-	vertical-align: middle;
-	font-size: 2em;
-	font-weight: bold;
-}
-input[type="submit"].checkout{
+a.checkout{
 	float: right;
-	height: 40px;
 	display: block;
 	background: #4A9428;
-	margin: 20px 0 0 0;
+	padding: 10px;
 	color: #000;
 	font-weight: bold;
+	text-decoration: none;
+	font-size: 0.9em;
+}
+a.clearCart{
+	color: red;
 }
 
-
-
+a.success{
+	margin: 20px 0 0 0;
+	padding: 10px;
+	color: #fff;
+	display: block;
+	background: #4A9C0B;
+}
 /* VIEW CART END */
 
 
