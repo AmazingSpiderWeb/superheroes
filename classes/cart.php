@@ -3,8 +3,24 @@
 session_start();
 
 require_once('../classes/page.php');
+require_once('../classes/database.php');
 
-class Cart{
+class Cart extends Database{
+
+# These are the fields from tb_products
+	public $order_id;
+	public $quantity;
+	public $product_id;
+	public $order_date;
+
+	function __CONSTRUCT($order_id=0){
+		# Set the database property to the db we supplied.
+		$this->db = new Database;
+
+		if($order_id!=0){
+			$this->load($order_id);
+		}
+	}
 
 
 	/**
@@ -74,7 +90,6 @@ class Cart{
 
 
 
-
 	/**
 	* 
 	* Return the total price of all products in the cart
@@ -103,5 +118,37 @@ class Cart{
 			$_SESSION['cart'] = array();
 		}
 	}
+
+
+
+
+	public function order(){
+		$this->order_id = $this->db->insert(
+			'tb_order',
+			array(
+				'order_date' => $this->order_date
+			)
+		);
+	}
+
+
+	public function checkout(){		
+
+		$this->db->insert(
+			'tb_orderline',
+			array(
+				'order_id' => $this->order_id,
+				'quantity' => $this->quantity,
+				'product_id' => $this->product_id
+			)
+		);	
+
+	}
+
+
+
+
+
+
 
 }

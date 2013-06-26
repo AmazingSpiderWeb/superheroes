@@ -94,6 +94,8 @@ class Product{
 			);
 		}
 	}
+
+
 	
 	// <script type="text/javascript">
 	//     function check(){

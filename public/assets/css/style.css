@@ -233,17 +233,23 @@ a.clearCart{
 	color: red;
 }
 
-a.success{
+a.success, .success{
 	margin: 20px 0 0 0;
 	padding: 10px;
 	color: #fff;
 	display: block;
 	background: #4A9C0B;
 }
+.success a{
+	color: #fff;
+}
 /* VIEW CART END */
 
 
 /* ADMAIN CSS*/
+.admin{
+	height: 600px;
+}
 a.addProduct{
 	position: absolute;
 	right: 0;

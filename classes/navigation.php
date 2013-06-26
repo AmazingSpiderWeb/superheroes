@@ -1,7 +1,6 @@
 <?php
 
 require_once('database.php');
-
 require_once('page.php');
 require_once('form.php');
 
@@ -21,6 +20,7 @@ class Navigation extends Form{
 		}
 	}
 
+
 	function make_lists(){
 		$all_of_the_products = $this->get_products();
 
@@ -29,7 +29,7 @@ class Navigation extends Form{
 			echo '<div class="features">';
 			echo '<a href="product_detail.php?id='.$product['product_id'].'"><img src="../public/assets/images/uploads/'.$product['image'].'" /></a>';
 			echo '<h3>'.$product['product_name'].'</h3>';
-			echo '<p>'.substr($product['description'],0,80).'... <a href="product_detail.php?id='.$product['product_id'].'">Read More +</a>' ;
+			echo '<p>'.$this->limit_words($product['description'],15).'... <a href="product_detail.php?id='.$product['product_id'].'">Read More +</a>' ;
 			echo '<span class="price">$'.$product['price'].'</span></p>';			
 			echo '</div>';
 		}
@@ -42,10 +42,10 @@ class Navigation extends Form{
 
 		foreach($all_of_the_products as $product){
 			# Make the title of the category a link, so that we can edit it.
-			echo '<div class="features">';
+			echo '<div class="features admin">';
 			echo '<a href="product_edit_page.php?id='.$product['product_id'].'"><img src="../public/assets/images/uploads/'.$product['image'].'" /></a>';
 			echo '<h3>'.$product['product_name'].'</h3>';
-			echo '<p>'.substr($product['description'],0,100).'...';
+			echo '<p>'.$this->limit_words($product['description'],15).'...';
 			echo '<span class="price">$'.$product['price'].'</span></p>';
 			echo '<a href="product_edit_page.php?id='.$product['product_id'].'" class="edit">Edit Page</a>';
 
@@ -96,5 +96,11 @@ class Navigation extends Form{
 		return $products;
 	}
 
+
+	function limit_words($string, $word_limit){
+		$words = explode(" ",$string);
+		return implode(" ",array_splice($words,0,$word_limit)
+		);
+	}
 
 }

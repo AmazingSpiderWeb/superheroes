@@ -11,7 +11,7 @@
 <body>
 <div class="container">
 	<div class="header">
-		<a href="../public/index.php" class="logo"><span class="hideText">Amazing Super Heroes</span></a>
+		<a href="index.php" class="logo"><span class="hideText">Amazing Super Heroes</span></a>
 		<ul>
 			<li><a href="index.php">Super Heroes</a></li>
 			<li><a href="admin_about.php">About Us</a></li>			

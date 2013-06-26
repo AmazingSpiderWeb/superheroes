@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 19, 2013 at 06:28 p.m.
+-- Generation Time: Jun 25, 2013 at 05:49 p.m.
 -- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
@@ -28,20 +28,17 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 CREATE TABLE IF NOT EXISTS `tb_order` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_date` date NOT NULL,
-  `delivery_date` date NOT NULL,
-  `order_status` varchar(100) NOT NULL,
-  `orderline_id` int(11) NOT NULL,
-  PRIMARY KEY (`order_id`),
-  KEY `orderline_id` (`orderline_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+  PRIMARY KEY (`order_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=60 ;
 
 --
 -- Dumping data for table `tb_order`
 --
 
-INSERT INTO `tb_order` (`order_id`, `order_date`, `delivery_date`, `order_status`, `orderline_id`) VALUES
-(1, '2013-06-10', '2013-06-21', 'Pending', 1),
-(3, '2013-06-12', '2013-06-15', 'Pending', 2);
+INSERT INTO `tb_order` (`order_id`, `order_date`) VALUES
+(1, '2013-06-10'),
+(3, '2013-06-12'),
+(59, '2013-06-25');
 
 -- --------------------------------------------------------
 
@@ -50,20 +47,21 @@ INSERT INTO `tb_order` (`order_id`, `order_date`, `delivery_date`, `order_status
 --
 
 CREATE TABLE IF NOT EXISTS `tb_orderline` (
-  `order_id` int(11) NOT NULL DEFAULT '0',
+  `order_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `prodcut_id` int(11) NOT NULL,
-  PRIMARY KEY (`order_id`),
-  KEY `tb_order` (`prodcut_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `product_id` int(11) NOT NULL,
+  KEY `tb_order` (`product_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_orderline`
 --
 
-INSERT INTO `tb_orderline` (`order_id`, `quantity`, `prodcut_id`) VALUES
+INSERT INTO `tb_orderline` (`order_id`, `quantity`, `product_id`) VALUES
 (1, 1, 1),
-(3, 6, 6);
+(3, 6, 6),
+(59, 1, 3),
+(59, 1, 1);
 
 -- --------------------------------------------------------
 

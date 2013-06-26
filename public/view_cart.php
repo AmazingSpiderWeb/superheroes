@@ -1,21 +1,23 @@
 <?php
 
 session_start();
-require_once('../classes/page.php');
 require_once('../classes/cart.php');
 
-$product = new Product($_GET['id']);
 $cart = new Cart();
 
 ?>
 <?php include '../includes/header.php'; ?>
 
 	<div class="main">
+		<?php
+		if(isset($_GET['submitted'])){
+			echo '<div class="success">Successfully submit your cart order! <a href="index.php">Back to Produsts</a></div>';
+		}
+		?>
 
 		<table class="viewCart" width="100%">
 			<tr>
-				<th width="20%"></th>
-				<th width="50%">Product</th>
+				<th colspan="2" width="70%">Product</th>
 				<th width="10%">Price</th>
 				<th width="10%">Quantity</th>
 				<th width="10%">Total</th>
@@ -37,7 +39,7 @@ $cart = new Cart();
 				</tr>
 				<tr >
 					<td colspan="3"><a href="clear_cart.php" class="clearCart">Clear</a></td>
-					<td colspan="2" align="right"><a href="" class="checkout">Proceed to Checkout</a></td>
+					<td colspan="2" align="right"><a href="checkout.php" class="checkout">Proceed to Checkout</a></td>
 				</tr>
 			<?php else: ?>
 				<tr>
